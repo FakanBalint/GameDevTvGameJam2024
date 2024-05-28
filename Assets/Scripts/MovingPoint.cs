@@ -17,8 +17,8 @@ public struct ConnectedPoint
 
 public class MovingPoint : MonoBehaviour
 {
-    [SerializeField] private bool isAccessible = true;
-    [SerializeField] private List<ConnectedPoint> connectedPoints = new List<ConnectedPoint>();
+    [SerializeField] protected bool isAccessible = true;
+    [SerializeField] protected List<ConnectedPoint> connectedPoints = new List<ConnectedPoint>();
     [SerializeField] private LayerMask targetLayer;
 
     public Transform GetTransform()
@@ -36,7 +36,7 @@ public class MovingPoint : MonoBehaviour
         return connectedPoints;
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         Collider2D ownCollider = GetComponent<Collider2D>();
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius, targetLayer);
