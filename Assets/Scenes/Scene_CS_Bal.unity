@@ -553,12 +553,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01999998, y: 0.14999998, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1228216977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
@@ -1043,6 +1043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPoint: {fileID: 937570969}
   MovementSpeed: 10
+  spriteCharaterRenderer: {fileID: 0}
 --- !u!212 &1228216976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1107,7 +1108,8 @@ Transform:
   m_LocalPosition: {x: -3.96, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 519420032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1228216978
@@ -1334,6 +1336,8 @@ MonoBehaviour:
     m_Bits: 64
   radius: 3
   gizmoColor: {r: 1, g: 0, b: 0, a: 1}
+  range: {x: -0.7, y: 0.7}
+  Enemy: {fileID: 2008900901935448911, guid: 4075fe0106931ca4c851a3a9f4fc7e20, type: 3}
 --- !u!61 &1495162060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1484,7 +1488,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1669196365}
   - {fileID: 1228216977}
