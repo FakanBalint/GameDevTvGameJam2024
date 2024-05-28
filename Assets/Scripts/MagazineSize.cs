@@ -24,6 +24,7 @@ public class MagazineSize : MonoBehaviour
         StartCoroutine(bulletLoad());
     }
 
+
     IEnumerator bulletLoad()
     {
         yield return new WaitForSeconds(2/bulletLoadFrequency);
