@@ -7,7 +7,7 @@ public class MagazineSize : MonoBehaviour
 
     [SerializeField] private int maxBullets = 60;
     [SerializeField] private int currentBullets;
-    [SerializeField] private int bulletLoadFrequency = 1;
+    [SerializeField] private float bulletLoadFrequency = 1;
     private bool magazineFull = true;
     public static MagazineSize instance { get; private set; }
 
@@ -24,7 +24,19 @@ public class MagazineSize : MonoBehaviour
         StartCoroutine(bulletLoad());
     }
 
-
+    private void Update()
+    {
+        IncreaseReloadFrequency();
+    }
+    private void IncreaseReloadFrequency()
+    {
+        float elapsedTime = Time.realtimeSinceStartup;
+        if(elapsedTime % 20f == 0) 
+        {
+            Debug.Log("Load speed increased.");
+            bulletLoadFrequency *= 1.3f;
+        }
+    }
     IEnumerator bulletLoad()
     {
         yield return new WaitForSeconds(2/bulletLoadFrequency);
