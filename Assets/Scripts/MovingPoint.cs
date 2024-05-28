@@ -31,6 +31,11 @@ public class MovingPoint : MonoBehaviour
         return isAccessible;
     }
 
+    public void SetAccessible(bool isAccessible) 
+    {
+        this.isAccessible = isAccessible;
+    }
+
     public List<ConnectedPoint> GetConnectedPoints()
     {
         return connectedPoints;

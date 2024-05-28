@@ -1090,7 +1090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPoint: {fileID: 937570969}
   MovementSpeed: 10
-  spriteCharaterRenderer: {fileID: 0}
+  spriteCharaterRenderer: {fileID: 1228216976}
 --- !u!212 &1228216976
 SpriteRenderer:
   m_ObjectHideFlags: 0

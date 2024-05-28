@@ -70,7 +70,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         foreach (var connectedPoint in currentPoint.GetConnectedPoints())
         {
-            if (connectedPoint.point.IsAccessible() && Vector2.Dot(connectedPoint.direction.normalized, direction) > 0.5f)
+            if (Vector2.Dot(connectedPoint.direction.normalized, direction) > 0.5f)
             {
                 StartCoroutine(MoveToPoint(connectedPoint.point));
                 break;
@@ -83,7 +83,7 @@ public class EnemyBehaviour : MonoBehaviour
         isMoving = true;
         Transform targetTransform = targetPoint.transform;
         Vector3 startPosition = transform.position;
-        Vector3 endPosition =  new Vector3(targetTransform.position.x + Random.Range(offset.x, offset.y), targetTransform.position.y, targetTransform.position.z);
+        Vector3 endPosition =  new Vector3(targetTransform.position.x + Random.Range(offset.x, offset.y), targetTransform.position.y + Random.Range(offset.x, offset.y), targetTransform.position.z);
         float distance = Vector3.Distance(startPosition, endPosition);
         float moveDuration = distance / MovementSpeed;  // Calculate the duration based on speed
 
@@ -97,8 +97,10 @@ public class EnemyBehaviour : MonoBehaviour
         }
 
         transform.position = endPosition;
+
         currentPoint = targetPoint;
         yield return new WaitForSeconds(WaitTime);
+        currentPoint.SetAccessible(false);
         isMoving = false;
     }
 }

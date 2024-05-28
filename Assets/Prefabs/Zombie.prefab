@@ -48,8 +48,8 @@ MonoBehaviour:
   currentPoint: {fileID: 0}
   MovementSpeed: 5
   spriteCharaterRenderer: {fileID: 8531537097594951533}
-  offset: {x: 0, y: 0}
-  WaitTime: 0
+  offset: {x: -0.7, y: 0.7}
+  WaitTime: 4
   inputList: []
 --- !u!1 &2166007018590969414
 GameObject:
