@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea72b0df45dee2745b8a9591e5ae47b7
+guid: 158bdb7edbd31674597173f8a3a84fc2
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 15
+    spritePixelsToUnits: 8
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -77,7 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
-    mosaicPadding: 4
+    mosaicPadding: 0
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -90,14 +90,14 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
-    mosaicPadding: 4
+    mosaicPadding: 0
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638525191027478210
+  platformSettingsDirtyTick: 638525190534741560
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: random dude_Frame_0
+  - name: pistol
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 44
-      width: 9
-      height: 11
-    spriteID: f04d700473b846d4aa07bf20ff891f61
+      x: 0
+      y: 0
+      width: 6
+      height: 4
+    spriteID: e86dfa6f62577e24abe2d430ee4a7cf6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,170 +140,25 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 44}
-  - name: random dude_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 21
-      y: 4
-      width: 9
-      height: 11
-    spriteID: 84930caaded19b54fb9ad228e5013ccc
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 21, y: 4}
-  - name: random dude_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0.45833334}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 9
-      height: 12
-    spriteID: a37a86bf46593c14785fda515d9fd73d
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
-  - name: random dude_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 21
-      y: 23
-      width: 9
-      height: 11
-    spriteID: d7bf775dc65792d43abae4ef8141ba55
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 21, y: 23}
-  - name: random dude_Frame_4
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 21
-      y: 42
-      width: 9
-      height: 11
-    spriteID: 5844e5224f0de2b44aba5a4d938953e7
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 21, y: 42}
-  - name: random dude_Frame_5
-    originalName: 
-    pivot: {x: 0.5, y: 0.45833334}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 24
-      width: 9
-      height: 12
-    spriteID: 7e6f51a023916c2419f001c3acf8847d
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 24}
+    uvTransform: {x: 0, y: 0}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 214433787
-    name: random dude
+    guid: 2129075433
+    name: pistol
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: random dude_Frame_0
+    - name: pistol
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 3
+        x: 1
         y: 2
-        width: 9
-        height: 11
-      spriteId: f04d700473b846d4aa07bf20ff891f61
-    - name: random dude_Frame_1
-      frameIndex: 1
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 9
-        height: 11
-      spriteId: 84930caaded19b54fb9ad228e5013ccc
-    - name: random dude_Frame_2
-      frameIndex: 2
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 9
-        height: 12
-      spriteId: a37a86bf46593c14785fda515d9fd73d
-    - name: random dude_Frame_3
-      frameIndex: 3
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 9
-        height: 11
-      spriteId: d7bf775dc65792d43abae4ef8141ba55
-    - name: random dude_Frame_4
-      frameIndex: 4
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 9
-        height: 11
-      spriteId: 5844e5224f0de2b44aba5a4d938953e7
-    - name: random dude_Frame_5
-      frameIndex: 5
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 9
-        height: 12
-      spriteId: 7e6f51a023916c2419f001c3acf8847d
+        width: 6
+        height: 4
+      spriteId: e86dfa6f62577e24abe2d430ee4a7cf6
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -382,4 +237,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 15, y: 15}
+  canvasSize: {x: 8, y: 8}
