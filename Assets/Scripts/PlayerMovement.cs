@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving = false;
     private Transform playerTransform;
     [SerializeField]float MovementSpeed = 0.5f;
+    [SerializeField]SpriteRenderer spriteCharaterRenderer;
     private void Start()
     {
         playerTransform = transform;
@@ -27,11 +28,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
           MoveToConnectedPoint(Vector2.right); 
+          FlipSprite(Vector2.right);
         }
 
         if (Input.GetAxisRaw("Horizontal") < 0)
         {
             MoveToConnectedPoint(Vector2.left);
+            FlipSprite(Vector2.left);
         }
 
         if (Input.GetAxisRaw("Vertical") > 0)
@@ -43,6 +46,19 @@ public class PlayerMovement : MonoBehaviour
         {
             MoveToConnectedPoint(Vector2.down);
         }
+    }
+
+    private void FlipSprite(Vector2 direction)
+    {
+        if (direction.x > 0)
+        {
+            spriteCharaterRenderer.flipX = false;
+        }
+        else if (direction.x < 0)
+        {
+            spriteCharaterRenderer.flipX = true;
+        }
+
     }
 
     private void MoveToConnectedPoint(Vector2 direction)
