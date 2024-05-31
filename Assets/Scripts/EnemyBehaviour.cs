@@ -12,6 +12,8 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private float WaitTime;
 
     [SerializeField] private List<Vector2> inputList;
+    
+    private bool CaptureingPoint = false;
 
     public void SetCurrentPoint(MovingPoint point)
     {
@@ -26,6 +28,11 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Update()
     {
+        if(CaptureingPoint){
+            return;
+        }
+
+
         if (!isMoving)
         {
             HandleInput();
@@ -46,7 +53,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void HandleInput()
     {
-        Vector2 input = inputList[Random.Range(0, 2)];
+        Vector2 input = inputList[Random.Range(0, 3)];
       
         if (input == Vector2.right)
         {
@@ -99,11 +106,17 @@ public class EnemyBehaviour : MonoBehaviour
         transform.position = endPosition;
 
         currentPoint = targetPoint;
-        if (targetPoint.IsAccessible()){
-
-            yield return new WaitForSeconds(WaitTime);
-        }
-        currentPoint.SetAccessible(false);
+        StartCoroutine(CapturePoint());
         isMoving = false;
+    }
+
+    IEnumerator CapturePoint()
+    {
+        if(currentPoint.IsAccessible()){
+            CaptureingPoint = true;
+            yield return new WaitForSeconds(WaitTime);
+            currentPoint.SetAccessible(false);
+            CaptureingPoint = false;
+        }
     }
 }

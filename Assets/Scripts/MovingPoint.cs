@@ -7,23 +7,43 @@ public struct ConnectedPoint
 {
     public MovingPoint point;
     public Vector2 direction;
+    public Vector2 notNormalisedDirection;
 
-    public ConnectedPoint(MovingPoint point, Vector2 direction)
+    public ConnectedPoint(MovingPoint point, Vector2 direction, Vector2 notNormalisedDirection)
     {
         this.point = point;
         this.direction = direction;
+        this.notNormalisedDirection = notNormalisedDirection;
     }
 }
 
 public class MovingPoint : MonoBehaviour
 {
+    [SerializeField] private Sprite EnabledSprite;
+    [SerializeField] private Sprite DisabledSprite;
+
+    public bool isPlayerOn;
     [SerializeField] protected bool isAccessible = true;
     [SerializeField] protected List<ConnectedPoint> connectedPoints = new List<ConnectedPoint>();
     [SerializeField] private LayerMask targetLayer;
+    [SerializeField] private GameObject enabledArrowPrefab;
+    [SerializeField] private GameObject disabledArrowPrefab;
+    private List<GameObject> arrows = new List<GameObject>();
 
     public Transform GetTransform()
     {
         return transform;
+    }
+
+    public bool IsPlayerOn()
+    {
+        return isPlayerOn;
+    }
+
+    public void SetPlayerOn(bool isPlayerOn)
+    {
+        this.isPlayerOn = isPlayerOn;
+        UpdateArrows();
     }
 
     public bool IsAccessible()
@@ -31,9 +51,12 @@ public class MovingPoint : MonoBehaviour
         return isAccessible;
     }
 
-    public void SetAccessible(bool isAccessible) 
+    public void SetAccessible(bool isAccessible)
     {
         this.isAccessible = isAccessible;
+
+        GetComponent<SpriteRenderer>().sprite = isAccessible ? EnabledSprite : DisabledSprite;
+        UpdateArrows();
     }
 
     public List<ConnectedPoint> GetConnectedPoints()
@@ -46,30 +69,57 @@ public class MovingPoint : MonoBehaviour
         Collider2D ownCollider = GetComponent<Collider2D>();
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius, targetLayer);
 
-        // Iterate over detected colliders if needed
         foreach (Collider2D collider in colliders)
         {
-            if(collider == ownCollider)
+            if (collider == ownCollider)
             {
                 continue;
             }
 
             Vector2 dir = (collider.transform.position - ownCollider.transform.position).normalized;
-            //Debug.Log("Directions with: " + Mathf.RoundToInt(dir.x) + Mathf.RoundToInt(dir.y));
+            Vector2 notNormalisedDir = (collider.transform.position - ownCollider.transform.position);
             MovingPoint point = collider.gameObject.GetComponent<MovingPoint>();
-            connectedPoints.Add(new ConnectedPoint(point, new Vector2(Mathf.RoundToInt(dir.x), Mathf.RoundToInt(dir.y))));
+            connectedPoints.Add(new ConnectedPoint(point, new Vector2(Mathf.RoundToInt(dir.x), Mathf.RoundToInt(dir.y)), notNormalisedDir));
+        }
+
+        UpdateArrows();
+    }
+
+    private void UpdateArrows()
+    {
+        foreach (GameObject arrow in arrows)
+        {
+            Destroy(arrow);
+        }
+
+        arrows.Clear();
+
+        if (isPlayerOn)
+        {
+            foreach (ConnectedPoint connectedPoint in connectedPoints)
+            {
+                GameObject arrowPrefab = connectedPoint.point.IsAccessible() ? enabledArrowPrefab : disabledArrowPrefab;
+                Vector3 offsetPosition = transform.position + (Vector3)connectedPoint.notNormalisedDirection.normalized * arrowOffsetDistance;
+                GameObject arrow = Instantiate(arrowPrefab, offsetPosition, Quaternion.identity, transform);
+                arrow.transform.right = connectedPoint.notNormalisedDirection.normalized; // Rotate the arrow to point in the direction
+
+                arrows.Add(arrow);
+            }
         }
     }
 
-    [SerializeField] private float radius = 1f; // Radius of the circle
-    public Color gizmoColor = Color.red; // Color of the gizmo
+    private void Update()
+    {
+        UpdateArrows();
+    }
 
+    [SerializeField] private float radius = 1f;
+    [SerializeField] private float arrowOffsetDistance = 0.5f; // Offset distance for the arrows
+    public Color gizmoColor = Color.red;
 
-    // Draw a gizmo to visualize the circle
     void OnDrawGizmos()
     {
         Gizmos.color = gizmoColor;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
-
 }

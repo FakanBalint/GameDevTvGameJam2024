@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
      private IEnumerator MoveToPoint(MovingPoint targetPoint)
     {
         isMoving = true;
+    
         Vector3 startPosition = playerTransform.position;
         Vector3 endPosition = targetPoint.GetTransform().position;
         float distance = Vector3.Distance(startPosition, endPosition);
@@ -93,12 +94,15 @@ public class PlayerMovement : MonoBehaviour
             }
 
             playerTransform.position = Vector3.Lerp(startPosition, endPosition, (elapsedTime / moveDuration));
+            currentPoint.SetPlayerOn(false);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
         playerTransform.position = endPosition;
         currentPoint = targetPoint;
+        currentPoint.SetPlayerOn(true);
+        
         isMoving = false;
     }
 
