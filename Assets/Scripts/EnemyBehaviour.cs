@@ -99,7 +99,10 @@ public class EnemyBehaviour : MonoBehaviour
         transform.position = endPosition;
 
         currentPoint = targetPoint;
-        yield return new WaitForSeconds(WaitTime);
+        if (targetPoint.IsAccessible()){
+
+            yield return new WaitForSeconds(WaitTime);
+        }
         currentPoint.SetAccessible(false);
         isMoving = false;
     }

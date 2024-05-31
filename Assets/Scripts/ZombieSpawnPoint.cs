@@ -18,9 +18,9 @@ public class ZombieSpawnPoint : MovingPoint
     IEnumerator Spawner()
     {
 
-        Debug.Log("STRT");
+        //Debug.Log("STRT");
         yield return new WaitForSeconds(Random.Range(5, 10));
-        Debug.Log("Spawn " + transform.name);
+        //Debug.Log("Spawn " + transform.name);
         EnemyBehaviour enemy = Instantiate(Enemy, new Vector3(transform.position.x + Random.Range(range.x, range.y), transform.position.y + Random.Range(range.x, range.y), transform.position.z), Quaternion.identity).GetComponent<EnemyBehaviour>();
         enemy.SetCurrentPoint(this);
         StartCoroutine(Spawner());

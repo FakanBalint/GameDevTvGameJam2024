@@ -6,13 +6,15 @@ public class PistolBehaviour : MonoBehaviour
 {
     public GameObject bulletPrefab;  // Assign your bullet prefab here
     public Transform bulletSpawnPoint;  // Assign the point where the bullet should spawn from
-    public float bulletSpeed = 20f;  // Speed of the bullet
-    [SerializeField] private float spreadIntensity = 5f; 
+    [SerializeField]private float bulletSpeed = 20f; 
+    [SerializeField] private float spreadIntensity = 5f;
+
+    [SerializeField] private int requiredBullets = 1; 
     void Update()
     {
         AimAtCursor();
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)&&MagazineSize.instance.canShoot(requiredBullets))
         {
             Shoot();
         }
@@ -37,6 +39,8 @@ public class PistolBehaviour : MonoBehaviour
 
     void Shoot()
     {
+        MagazineSize.instance.RemoveBullets(requiredBullets);
+
         // Instantiate the bullet at the spawn point
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();

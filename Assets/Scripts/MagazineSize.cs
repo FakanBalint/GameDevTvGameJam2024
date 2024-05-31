@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MagazineSize : MonoBehaviour
 {
-
     [SerializeField] private int maxBullets = 60;
     [SerializeField] private int currentBullets;
     [SerializeField] private float bulletLoadFrequency = 1;
@@ -13,59 +12,67 @@ public class MagazineSize : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null || instance != this)
-        {
-            Destroy(this);
-        } else
+        if (instance == null)
         {
             instance = this;
-            currentBullets = maxBullets;
         }
+        else if (instance != this)
+        {
+            Destroy(this);
+        }
+    }
+
+    private void Start()
+    {
+        // Initialize currentBullets to maxBullets at start
+        currentBullets = maxBullets;
+        magazineFull = currentBullets == maxBullets;
         StartCoroutine(bulletLoad());
     }
 
     private void Update()
     {
-        IncreaseReloadFrequency();
+       // IncreaseReloadFrequency();
     }
+
     private void IncreaseReloadFrequency()
     {
         float elapsedTime = Time.realtimeSinceStartup;
-        if(elapsedTime % 20f == 0) 
+        if ((int)elapsedTime % 20 == 0 && elapsedTime > 0) 
         {
             Debug.Log("Load speed increased.");
             bulletLoadFrequency *= 1.3f;
         }
     }
+
     IEnumerator bulletLoad()
     {
-        yield return new WaitForSeconds(2/bulletLoadFrequency);
-        if (!magazineFull)
+        while (true)
         {
-            currentBullets++;
-            if(currentBullets == maxBullets)
+            yield return new WaitForSeconds(2 / bulletLoadFrequency);
+            
+            if (!magazineFull)
             {
-                magazineFull = true;
-            } else
-            {
-                magazineFull = false;
+                currentBullets++;
+                if (currentBullets >= maxBullets)
+                {
+                    currentBullets = maxBullets;
+                    magazineFull = true;
+                }
             }
-            StartCoroutine(bulletLoad());
-        } else
-        {
-            StartCoroutine(bulletLoad());
         }
     }
 
     public bool canShoot(int bulletCount)
     {
-        if(currentBullets-bulletCount > 0)
-        {
-            return true;
+        return currentBullets - bulletCount > 0;
+    }
+
+    public void RemoveBullets(int bulletCount){
+        currentBullets -= bulletCount;
+        if(currentBullets <= 0){
+            currentBullets = 0;
         }
-        else
-        {
-            return false;
-        }
+        magazineFull = false;
     }
 }
