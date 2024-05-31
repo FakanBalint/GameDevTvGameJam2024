@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 58851db548585da488d15636a360db65
+guid: c0891b11ea9bf1f41a51f4a0d5b7d59e
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638525370000136090
+  platformSettingsDirtyTick: 638525384355870569
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: zombie_Frame_0
+  - name: brain_zombie_Frame_0
     originalName: 
-    pivot: {x: 0.38888887, y: 0.55}
+    pivot: {x: 0.38888887, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 42
+      y: 44
       width: 9
-      height: 10
-    spriteID: 194a581ef5e57ce4f95466d67e5a1143
+      height: 11
+    spriteID: 949e8280d2a3e06408777f16a0679d10
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,10 +140,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 42}
-  - name: zombie_Frame_1
+    uvTransform: {x: 4, y: 44}
+  - name: brain_zombie_Frame_1
     originalName: 
-    pivot: {x: 0.38888887, y: 0.55}
+    pivot: {x: 0.38888887, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -151,8 +151,8 @@ ScriptedImporter:
       x: 21
       y: 4
       width: 9
-      height: 10
-    spriteID: 43907bc6de5a961409d5af9d8c88ef43
+      height: 11
+    spriteID: 8790136987fcb6f449870c1dc097c176
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,9 +161,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 21, y: 4}
-  - name: zombie_Frame_2
+  - name: brain_zombie_Frame_2
     originalName: 
-    pivot: {x: 0.38888887, y: 0.5}
+    pivot: {x: 0.38888887, y: 0.45833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -171,8 +171,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 9
-      height: 11
-    spriteID: b8af4c17a2aa9b645a11a2e8e50980e3
+      height: 12
+    spriteID: 6a2db0ec1a3e2e240b1356bae7580394
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,7 +181,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: zombie_Frame_3
+  - name: brain_zombie_Frame_3
     originalName: 
     pivot: {x: 0.38888887, y: 0.55}
     alignment: 9
@@ -189,10 +189,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 21
-      y: 22
+      y: 42
       width: 9
       height: 10
-    spriteID: 6bdd8f08e5d676d46b992355deb7e469
+    spriteID: 030253d9877276b4e8cd111a667fa309
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,39 +200,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 21, y: 22}
-  - name: zombie_Frame_4
-    originalName: 
-    pivot: {x: 0.38888887, y: 0.55}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 21
-      y: 40
-      width: 9
-      height: 10
-    spriteID: 1728bfabe98420048bc3171d76b20160
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 21, y: 40}
-  - name: zombie_Frame_5
+    uvTransform: {x: 21, y: 42}
+  - name: brain_zombie_Frame_4
     originalName: 
     pivot: {x: 0.38888887, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
+      x: 21
       y: 23
       width: 9
       height: 11
-    spriteID: de532ef50ff588a4e933809d5fba07e6
+    spriteID: ba5c4cda017e478468e26820833eccbc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -240,44 +220,64 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 23}
+    uvTransform: {x: 21, y: 23}
+  - name: brain_zombie_Frame_5
+    originalName: 
+    pivot: {x: 0.38888887, y: 0.45833334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 24
+      width: 9
+      height: 12
+    spriteID: 00c3902668073534ba7e4f22773eb71c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 24}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 2081263084
-    name: zombie
+    guid: 801304551
+    name: brain_zombie
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: zombie_Frame_0
+    - name: brain_zombie_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 4
         y: 2
         width: 9
-        height: 10
-      spriteId: 194a581ef5e57ce4f95466d67e5a1143
-    - name: zombie_Frame_1
+        height: 11
+      spriteId: 949e8280d2a3e06408777f16a0679d10
+    - name: brain_zombie_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
         x: 4
         y: 2
         width: 9
-        height: 10
-      spriteId: 43907bc6de5a961409d5af9d8c88ef43
-    - name: zombie_Frame_2
+        height: 11
+      spriteId: 8790136987fcb6f449870c1dc097c176
+    - name: brain_zombie_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 4
         y: 2
         width: 9
-        height: 11
-      spriteId: b8af4c17a2aa9b645a11a2e8e50980e3
-    - name: zombie_Frame_3
+        height: 12
+      spriteId: 6a2db0ec1a3e2e240b1356bae7580394
+    - name: brain_zombie_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -285,25 +285,25 @@ ScriptedImporter:
         y: 2
         width: 9
         height: 10
-      spriteId: 6bdd8f08e5d676d46b992355deb7e469
-    - name: zombie_Frame_4
+      spriteId: 030253d9877276b4e8cd111a667fa309
+    - name: brain_zombie_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
         x: 4
         y: 2
         width: 9
-        height: 10
-      spriteId: 1728bfabe98420048bc3171d76b20160
-    - name: zombie_Frame_5
+        height: 11
+      spriteId: ba5c4cda017e478468e26820833eccbc
+    - name: brain_zombie_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
         x: 4
         y: 2
         width: 9
-        height: 11
-      spriteId: de532ef50ff588a4e933809d5fba07e6
+        height: 12
+      spriteId: 00c3902668073534ba7e4f22773eb71c
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -320,18 +320,6 @@ ScriptedImporter:
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Windows Store Apps
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 2048
@@ -368,6 +356,18 @@ ScriptedImporter:
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Windows Store Apps
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 2048

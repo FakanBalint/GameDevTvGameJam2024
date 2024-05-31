@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour,IDamageable
 {
 
-    int health ;
+    [SerializeField]int health ;
     public void TakeDamage(int damage)
     {
         health -= damage;

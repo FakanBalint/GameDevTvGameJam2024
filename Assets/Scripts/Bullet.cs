@@ -11,15 +11,13 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, 3f);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.TryGetComponent<IDamageable>(out IDamageable damageable)){
-            damageable.TakeDamage(damage);
-
-            if(!shoulPierce){
-                Destroy(gameObject);
-            }
-        }
+    private void OnTriggerEnter2D(Collider2D other) {
+       if(other.TryGetComponent<IDamageable>(out IDamageable damageable)){
+           damageable.TakeDamage(damage);
+           if(!shoulPierce){
+               Destroy(gameObject);
+           }
+       }
     }
 }
 
