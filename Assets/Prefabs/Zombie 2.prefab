@@ -52,7 +52,7 @@ MonoBehaviour:
   currentPoint: {fileID: 0}
   MovementSpeed: 5
   spriteCharaterRenderer: {fileID: 8531537097594951533}
-  CapturePointSpriteRenderer: {fileID: 3205511041575710364}
+  capturePointSpriteRenderer: {fileID: 3205511041575710364}
   offset: {x: 0, y: 0}
   WaitTime: 4
   inputList: []

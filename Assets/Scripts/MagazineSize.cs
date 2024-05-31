@@ -75,4 +75,16 @@ public class MagazineSize : MonoBehaviour
         }
         magazineFull = false;
     }
+
+    public int getCurrentBullets(){
+        return currentBullets;
+    }
+
+    public void AddBullets(int bulletCount){
+        currentBullets += bulletCount;
+        if(currentBullets > maxBullets){
+            currentBullets = maxBullets;
+        }
+        magazineFull = true;
+    }
 }

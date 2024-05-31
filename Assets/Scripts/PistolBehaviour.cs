@@ -6,10 +6,10 @@ public class PistolBehaviour : MonoBehaviour
 {
     public GameObject bulletPrefab;  // Assign your bullet prefab here
     public Transform bulletSpawnPoint;  // Assign the point where the bullet should spawn from
-    [SerializeField]private float bulletSpeed = 20f; 
-    [SerializeField] private float spreadIntensity = 5f;
+    [SerializeField]protected float bulletSpeed = 20f; 
+    [SerializeField] protected float spreadIntensity = 5f;
 
-    [SerializeField] private int requiredBullets = 1; 
+    [SerializeField] protected int requiredBullets = 1; 
     void Update()
     {
         AimAtCursor();
@@ -37,7 +37,7 @@ public class PistolBehaviour : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 
-    void Shoot()
+     protected virtual void Shoot()
     {
         MagazineSize.instance.RemoveBullets(requiredBullets);
 
