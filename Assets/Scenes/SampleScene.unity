@@ -617,6 +617,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1543656240486252984, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4240812673486621163, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.22
@@ -931,6 +935,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1543656240486252984, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4240812673486621163, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.91
@@ -1175,7 +1183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBullets: 60
   currentBullets: 0
-  bulletLoadFrequency: 2
+  bulletLoadFrequency: 3
 --- !u!4 &379960073
 Transform:
   m_ObjectHideFlags: 0
@@ -1236,7 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b7afd1e780df0499d2f284ef6f1747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3610780692968314770, guid: dccfdb014490d1e449fc2978ce339e3a, type: 3}
+  bulletPrefab: {fileID: 3610780692968314770, guid: ba811bd664fb4b148b07c5b025681c8d, type: 3}
   bulletSpawnPoint: {fileID: 897137717}
   bulletSpeed: 20
   spreadIntensity: 5
@@ -1630,6 +1638,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1543656240486252984, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4240812673486621163, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.48
@@ -1785,6 +1797,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1543656240486252984, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4240812673486621163, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1
@@ -1861,6 +1877,10 @@ PrefabInstance:
     - target: {fileID: 575906680107393802, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543656240486252984, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4240812673486621163, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2670,6 +2690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228216977}
   - component: {fileID: 1228216975}
+  - component: {fileID: 1228216978}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2690,7 +2711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPoint: {fileID: 937570969}
-  MovementSpeed: 10
+  MovementSpeed: 5
   spriteCharaterRenderer: {fileID: 1516749844}
 --- !u!4 &1228216977
 Transform:
@@ -2713,6 +2734,24 @@ Transform:
   - {fileID: 1511408519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1228216978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228216974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5302e1b6c2912c4dad3dff653e287d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToEnable:
+  - {fileID: 1256676030}
+  - {fileID: 118652437}
+  - {fileID: 385158287}
+  - {fileID: 1772532270}
+  - {fileID: 1511408517}
 --- !u!1 &1230879680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3121,6 +3160,10 @@ PrefabInstance:
     - target: {fileID: 575906680107393802, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543656240486252984, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4240812673486621163, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3540,7 +3583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b7afd1e780df0499d2f284ef6f1747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3610780692968314770, guid: dccfdb014490d1e449fc2978ce339e3a, type: 3}
+  bulletPrefab: {fileID: 3610780692968314770, guid: c7218ec48ae87fc4388f7b20cb786b13, type: 3}
   bulletSpawnPoint: {fileID: 1230879681}
   bulletSpeed: 20
   spreadIntensity: 1
@@ -3962,6 +4005,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1543656240486252984, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4240812673486621163, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.68
@@ -4274,7 +4321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b7afd1e780df0499d2f284ef6f1747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3610780692968314770, guid: dccfdb014490d1e449fc2978ce339e3a, type: 3}
+  bulletPrefab: {fileID: 3610780692968314770, guid: 8efa4b8c80031814abfd9fa8d4ab3575, type: 3}
   bulletSpawnPoint: {fileID: 1113167343}
   bulletSpeed: 20
   spreadIntensity: 5
@@ -4455,6 +4502,10 @@ PrefabInstance:
     - target: {fileID: 575906680107393802, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543656240486252984, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4240812673486621163, guid: 96641b08dfcd93d47980efbba45a4f39, type: 3}
       propertyPath: m_LocalPosition.x

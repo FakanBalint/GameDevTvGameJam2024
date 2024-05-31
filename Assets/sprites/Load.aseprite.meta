@@ -1,8 +1,13 @@
 fileFormatVersion: 2
-guid: 52b9fef9fa038854db5157fb75df4d9e
+guid: 5fd94270e747e404b886b3c56b951d3c
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Load_Clip
+    second: {fileID: 7400000, guid: 37617938addecb04285ee72b5a16cfac, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +102,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638527803239261834
+  platformSettingsDirtyTick: 638527837085096498
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +126,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: AK-47_bullet
+  - name: Load_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0.49999994}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 7
-      height: 3
-    spriteID: 3cd3513b90d280e43a0e715667aa126d
+      width: 21
+      height: 6
+    spriteID: dfeb8abf25b552a48b8ffc00225392de
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,24 +146,169 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Load_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 18
+      width: 21
+      height: 6
+    spriteID: bc48d21a03120244a8ee3feaf27b93a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 18}
+  - name: Load_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 32
+      width: 21
+      height: 6
+    spriteID: 2870feee7ef7ccc4abda9b6a316b5fee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 32}
+  - name: Load_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 46
+      width: 21
+      height: 6
+    spriteID: 0434e330bf942b7418460ff48e001f97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 46}
+  - name: Load_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 33
+      y: 4
+      width: 21
+      height: 6
+    spriteID: 0a2e792412846e54ca50b17a254d4b13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 33, y: 4}
+  - name: Load_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 33
+      y: 18
+      width: 21
+      height: 6
+    spriteID: 0d03ad0914dfb2241a1caa20ac629a6f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 33, y: 18}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1648483911
-    name: AK-47_bullet
+    guid: -150043018
+    name: Load
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: AK-47_bullet
+    - name: Load_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: 2
-        width: 7
-        height: 3
-      spriteId: 3cd3513b90d280e43a0e715667aa126d
+        x: 0
+        y: 0
+        width: 21
+        height: 6
+      spriteId: dfeb8abf25b552a48b8ffc00225392de
+    - name: Load_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 21
+        height: 6
+      spriteId: bc48d21a03120244a8ee3feaf27b93a7
+    - name: Load_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 21
+        height: 6
+      spriteId: 2870feee7ef7ccc4abda9b6a316b5fee
+    - name: Load_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 21
+        height: 6
+      spriteId: 0434e330bf942b7418460ff48e001f97
+    - name: Load_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 21
+        height: 6
+      spriteId: 0a2e792412846e54ca50b17a254d4b13
+    - name: Load_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 21
+        height: 6
+      spriteId: 0d03ad0914dfb2241a1caa20ac629a6f
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -237,4 +387,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 9, y: 7}
+  canvasSize: {x: 21, y: 6}

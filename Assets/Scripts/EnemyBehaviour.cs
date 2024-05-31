@@ -8,6 +8,8 @@ public class EnemyBehaviour : MonoBehaviour
     private bool isMoving = false;
     [SerializeField] float MovementSpeed = 0.3f;
     [SerializeField] SpriteRenderer spriteCharaterRenderer;
+    [SerializeField] GameObject CapturePointSpriteRenderer;
+
     [SerializeField] private Vector2 offset;
     [SerializeField] private float WaitTime;
 
@@ -114,8 +116,10 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if(currentPoint.IsAccessible()){
             CaptureingPoint = true;
+            CapturePointSpriteRenderer.SetActive(true);
             yield return new WaitForSeconds(WaitTime);
             currentPoint.SetAccessible(false);
+            CapturePointSpriteRenderer.SetActive(false);
             CaptureingPoint = false;
         }
     }
