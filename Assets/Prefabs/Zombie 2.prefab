@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPoint: {fileID: 0}
-  MovementSpeed: 5
+  MovementSpeed: 2
   spriteCharaterRenderer: {fileID: 8531537097594951533}
   capturePointSpriteRenderer: {fileID: 3205511041575710364}
   offset: {x: 0, y: 0}
@@ -194,7 +194,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ca60edb47c6eb9a438779c38055a280b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

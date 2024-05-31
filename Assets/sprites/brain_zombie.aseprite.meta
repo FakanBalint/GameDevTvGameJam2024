@@ -78,7 +78,7 @@ ScriptedImporter:
     defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
-    spritePadding: 0
+    spritePadding: 2
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
@@ -91,13 +91,13 @@ ScriptedImporter:
     defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
-    spritePadding: 0
+    spritePadding: 2
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638525384355870569
+  platformSettingsDirtyTick: 638527959379135960
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: brain_zombie_Frame_0
     originalName: 
-    pivot: {x: 0.38888887, y: 0.5}
+    pivot: {x: 0.40909094, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 44
-      width: 9
-      height: 11
+      x: 23
+      y: 4
+      width: 11
+      height: 13
     spriteID: 949e8280d2a3e06408777f16a0679d10
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 44}
+    uvTransform: {x: 23, y: 4}
   - name: brain_zombie_Frame_1
     originalName: 
-    pivot: {x: 0.38888887, y: 0.5}
+    pivot: {x: 0.40909094, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 21
-      y: 4
-      width: 9
-      height: 11
+      x: 23
+      y: 25
+      width: 11
+      height: 13
     spriteID: 8790136987fcb6f449870c1dc097c176
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 21, y: 4}
+    uvTransform: {x: 23, y: 25}
   - name: brain_zombie_Frame_2
     originalName: 
-    pivot: {x: 0.38888887, y: 0.45833334}
+    pivot: {x: 0.40909094, y: 0.4642857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 9
-      height: 12
+      width: 11
+      height: 14
     spriteID: 6a2db0ec1a3e2e240b1356bae7580394
     spriteBone: []
     spriteOutline: []
@@ -183,15 +183,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: brain_zombie_Frame_3
     originalName: 
-    pivot: {x: 0.38888887, y: 0.55}
+    pivot: {x: 0.40909094, y: 0.5416667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 21
-      y: 42
-      width: 9
-      height: 10
+      x: 4
+      y: 48
+      width: 11
+      height: 12
     spriteID: 030253d9877276b4e8cd111a667fa309
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 21, y: 42}
+    uvTransform: {x: 4, y: 48}
   - name: brain_zombie_Frame_4
     originalName: 
-    pivot: {x: 0.38888887, y: 0.5}
+    pivot: {x: 0.40909094, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 21
-      y: 23
-      width: 9
-      height: 11
+      x: 23
+      y: 46
+      width: 11
+      height: 13
     spriteID: ba5c4cda017e478468e26820833eccbc
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 21, y: 23}
+    uvTransform: {x: 23, y: 46}
   - name: brain_zombie_Frame_5
     originalName: 
-    pivot: {x: 0.38888887, y: 0.45833334}
+    pivot: {x: 0.40909094, y: 0.4642857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 24
-      width: 9
-      height: 12
+      y: 26
+      width: 11
+      height: 14
     spriteID: 00c3902668073534ba7e4f22773eb71c
     spriteBone: []
     spriteOutline: []
@@ -240,7 +240,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 24}
+    uvTransform: {x: 4, y: 26}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0

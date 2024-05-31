@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -19,6 +20,7 @@ public struct ConnectedPoint
 
 public class MovingPoint : MonoBehaviour
 {
+    [SerializeField] private  GameObject AmmoBoxPrefab;
     [SerializeField] private Sprite EnabledSprite;
     [SerializeField] private Sprite DisabledSprite;
 
@@ -66,6 +68,7 @@ public class MovingPoint : MonoBehaviour
 
     protected virtual void Start()
     {
+        StartCoroutine(SpawnAmmoBox());
         Collider2D ownCollider = GetComponent<Collider2D>();
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius, targetLayer);
 
@@ -83,6 +86,13 @@ public class MovingPoint : MonoBehaviour
         }
 
         UpdateArrows();
+    }
+
+    IEnumerator SpawnAmmoBox()
+    {
+        yield return new WaitForSeconds(GetAmmoBoxSpawn());
+            Instantiate(AmmoBoxPrefab, transform.position, Quaternion.identity);
+        SpawnAmmoBox();
     }
 
     private void UpdateArrows()
@@ -111,6 +121,14 @@ public class MovingPoint : MonoBehaviour
     private void Update()
     {
         UpdateArrows();
+        if(!IsAccessible()){
+            StopCoroutine(SpawnAmmoBox());
+        }
+    }
+
+
+    private float GetAmmoBoxSpawn(){
+        return Random.Range(300, 30);
     }
 
     [SerializeField] private float radius = 1f;

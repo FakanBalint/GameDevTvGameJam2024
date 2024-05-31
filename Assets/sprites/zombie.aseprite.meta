@@ -78,7 +78,7 @@ ScriptedImporter:
     defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
-    spritePadding: 0
+    spritePadding: 2
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
@@ -91,13 +91,13 @@ ScriptedImporter:
     defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
-    spritePadding: 0
+    spritePadding: 2
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638525370000136090
+  platformSettingsDirtyTick: 638527958964534739
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: zombie_Frame_0
     originalName: 
-    pivot: {x: 0.38888887, y: 0.55}
+    pivot: {x: 0.40909094, y: 0.5416667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 42
-      width: 9
-      height: 10
+      y: 46
+      width: 11
+      height: 12
     spriteID: 194a581ef5e57ce4f95466d67e5a1143
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 42}
+    uvTransform: {x: 4, y: 46}
   - name: zombie_Frame_1
     originalName: 
-    pivot: {x: 0.38888887, y: 0.55}
+    pivot: {x: 0.40909094, y: 0.5416667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 21
+      x: 23
       y: 4
-      width: 9
-      height: 10
+      width: 11
+      height: 12
     spriteID: 43907bc6de5a961409d5af9d8c88ef43
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 21, y: 4}
+    uvTransform: {x: 23, y: 4}
   - name: zombie_Frame_2
     originalName: 
-    pivot: {x: 0.38888887, y: 0.5}
+    pivot: {x: 0.40909094, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 9
-      height: 11
+      width: 11
+      height: 13
     spriteID: b8af4c17a2aa9b645a11a2e8e50980e3
     spriteBone: []
     spriteOutline: []
@@ -183,15 +183,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: zombie_Frame_3
     originalName: 
-    pivot: {x: 0.38888887, y: 0.55}
+    pivot: {x: 0.40909094, y: 0.5416667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 21
-      y: 22
-      width: 9
-      height: 10
+      x: 23
+      y: 24
+      width: 11
+      height: 12
     spriteID: 6bdd8f08e5d676d46b992355deb7e469
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 21, y: 22}
+    uvTransform: {x: 23, y: 24}
   - name: zombie_Frame_4
     originalName: 
-    pivot: {x: 0.38888887, y: 0.55}
+    pivot: {x: 0.40909094, y: 0.5416667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 21
-      y: 40
-      width: 9
-      height: 10
+      x: 23
+      y: 44
+      width: 11
+      height: 12
     spriteID: 1728bfabe98420048bc3171d76b20160
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 21, y: 40}
+    uvTransform: {x: 23, y: 44}
   - name: zombie_Frame_5
     originalName: 
-    pivot: {x: 0.38888887, y: 0.5}
+    pivot: {x: 0.40909094, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 23
-      width: 9
-      height: 11
+      y: 25
+      width: 11
+      height: 13
     spriteID: de532ef50ff588a4e933809d5fba07e6
     spriteBone: []
     spriteOutline: []
@@ -240,7 +240,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 23}
+    uvTransform: {x: 4, y: 25}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
