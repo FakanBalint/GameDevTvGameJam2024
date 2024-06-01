@@ -7,9 +7,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private MovingPoint currentPoint;
     private bool isMoving = false;
     private Transform playerTransform;
-    [SerializeField]float MovementSpeed = 0.5f;
-    [SerializeField]SpriteRenderer spriteCharaterRenderer;
-    [SerializeField]private AudioClip walkSound;
+    [SerializeField] float MovementSpeed = 0.5f;
+    [SerializeField] SpriteRenderer spriteCharaterRenderer;
+    [SerializeField] private AudioClip walkSound;
+
     private void Start()
     {
         playerTransform = transform;
@@ -18,11 +19,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if(currentPoint.IsAccessible() == false){
+        if (currentPoint.IsAccessible() == false)
+        {
             GameManager.instance.GameOver();
         }
-
-
 
         if (!isMoving)
         {
@@ -34,8 +34,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
-          MoveToConnectedPoint(Vector2.right); 
-          FlipSprite(Vector2.right);
+            MoveToConnectedPoint(Vector2.right);
+            FlipSprite(Vector2.right);
         }
 
         if (Input.GetAxisRaw("Horizontal") < 0)
@@ -65,11 +65,12 @@ public class PlayerMovement : MonoBehaviour
         {
             spriteCharaterRenderer.flipX = true;
         }
-
     }
 
     private void MoveToConnectedPoint(Vector2 direction)
     {
+        if (isMoving) return;  // Prevent starting a new movement if already moving
+
         foreach (var connectedPoint in currentPoint.GetConnectedPoints())
         {
             if (connectedPoint.point.IsAccessible() && Vector2.Dot(connectedPoint.direction.normalized, direction) > 0.5f)
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-     private IEnumerator MoveToPoint(MovingPoint targetPoint)
+    private IEnumerator MoveToPoint(MovingPoint targetPoint)
     {
         isMoving = true;
 
@@ -88,15 +89,14 @@ public class PlayerMovement : MonoBehaviour
         Vector3 startPosition = playerTransform.position;
         Vector3 endPosition = targetPoint.GetTransform().position;
         float distance = Vector3.Distance(startPosition, endPosition);
-        float moveDuration = distance / MovementSpeed;  // Calculate the duration based on speed
+        float moveDuration = distance / MovementSpeed;
 
         float elapsedTime = 0;
 
         while (elapsedTime < moveDuration)
         {
-             if (!targetPoint.IsAccessible())
+            if (!targetPoint.IsAccessible())
             {
-                // Move back to the start position if target becomes inaccessible
                 yield return MoveBackToStart(startPosition, elapsedTime);
                 yield break;
             }
@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         playerTransform.position = endPosition;
         currentPoint = targetPoint;
         currentPoint.SetPlayerOn(true);
-        
+
         isMoving = false;
     }
 
