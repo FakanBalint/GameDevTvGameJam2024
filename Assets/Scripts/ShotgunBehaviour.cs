@@ -16,6 +16,7 @@ public class ShotgunBehaviour : PistolBehaviour
     MagazineSize.instance.RemoveBullets(amountOfShots);
        for (int i = 0; i < amountOfShots; i++)
        {
+        AudioManager.instance.PlaySound(shootSound);
             // Instantiate the bullet at the spawn point
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -25,7 +26,7 @@ public class ShotgunBehaviour : PistolBehaviour
             Vector3 spreadDirection = Quaternion.Euler(0, 0, spreadAngle) * bulletSpawnPoint.right;
 
             // Set the bullet's velocity to move it in the direction with spread
-            rb.velocity = spreadDirection * (bulletSpeed+Random.Range(-spreadIntensity, spreadIntensity));
+            rb.velocity = spreadDirection * (bulletSpeed+Random.Range(-spreadIntensity/2, spreadIntensity/2));
         }
     }
    

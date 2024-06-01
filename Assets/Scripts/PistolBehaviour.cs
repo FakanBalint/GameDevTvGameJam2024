@@ -6,21 +6,23 @@ public class PistolBehaviour : MonoBehaviour
 {
     public GameObject bulletPrefab;  // Assign your bullet prefab here
     public Transform bulletSpawnPoint;  // Assign the point where the bullet should spawn from
+    public AudioClip shootSound; 
     [SerializeField]protected float bulletSpeed = 20f; 
     [SerializeField] protected float spreadIntensity = 5f;
 
     [SerializeField] protected int requiredBullets = 1; 
-    void Update()
+    protected virtual void Update()
     {
         AimAtCursor();
 
         if (Input.GetMouseButtonDown(0)&&MagazineSize.instance.canShoot(requiredBullets))
         {
+            
             Shoot();
         }
     }
 
-    void AimAtCursor()
+    protected void AimAtCursor()
     {
         // Convert mouse position to world position
         Vector3 mousePosition = Input.mousePosition;
@@ -39,6 +41,7 @@ public class PistolBehaviour : MonoBehaviour
 
      protected virtual void Shoot()
     {
+        AudioManager.instance.PlaySound(shootSound);
         MagazineSize.instance.RemoveBullets(requiredBullets);
 
         // Instantiate the bullet at the spawn point

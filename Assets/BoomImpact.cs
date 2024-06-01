@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoomImpact : MonoBehaviour
 {
     int damage = 15;
-
+    [SerializeField]AudioClip boomSound;
 
     public void SetDamage(int damage)
     {
@@ -22,6 +22,7 @@ public class BoomImpact : MonoBehaviour
 
     public void Explode()
     {
+        AudioManager.instance.PlaySound(boomSound);
         Destroy(gameObject, 0.25f);
     }
 }

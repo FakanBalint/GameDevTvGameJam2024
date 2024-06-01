@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour,IDamageable
 {
-
+    [SerializeField]AudioClip hitSound;
+    [SerializeField]AudioClip dieSound;
     [SerializeField]int health ;
     public void TakeDamage(int damage)
     {
         health -= damage;
+        AudioManager.instance.PlaySound(hitSound);
         if (health <= 0)
         {
             health = 0;
@@ -18,7 +20,8 @@ public class HealthSystem : MonoBehaviour,IDamageable
 
     public void Die()
     {
-        Debug.Log("Dead zombie");
+        Score.instance.IncreaseScore();
+        AudioManager.instance.PlaySound(dieSound);
         Destroy(gameObject);
     }
 }

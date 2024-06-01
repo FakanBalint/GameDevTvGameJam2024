@@ -68,6 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: facc36b637a316941b83ce61517c0fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: 02417e8f95b000e46b3ae84cfdd8905b, type: 3}
+  dieSound: {fileID: 8300000, guid: c0f3ae57bc0da3148b9298a8325112f3, type: 3}
   health: 1
 --- !u!50 &1675708834557001527
 Rigidbody2D:
@@ -139,7 +141,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.52}
+  m_Size: {x: 0.3, y: 0.7}
   m_EdgeRadius: 0
 --- !u!1 &2166007018590969414
 GameObject:

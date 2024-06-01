@@ -69,6 +69,8 @@ public class MovingPoint : MonoBehaviour
 
     protected virtual void Start()
     {
+
+        
         StartCoroutine(SpawnAmmoBox());
         Collider2D ownCollider = GetComponent<Collider2D>();
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius, targetLayer);
@@ -89,14 +91,18 @@ public class MovingPoint : MonoBehaviour
         UpdateArrows();
     }
 
-    IEnumerator SpawnAmmoBox()
+    protected virtual IEnumerator SpawnAmmoBox()
     {
         yield return new WaitForSeconds(GetAmmoBoxSpawn());
-            int i = Random.Range(1,0);
+            int i = Random.Range(0,2);
+
+            if(isAccessible == false){
+                i=1;
+            }
 
         if(i == 1)
             Instantiate(GrenadePrefab, transform.position, Quaternion.identity);
-        else
+        else if(i == 0)
             Instantiate(AmmoBoxPrefab, transform.position, Quaternion.identity);
         SpawnAmmoBox();
     }

@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Transform playerTransform;
     [SerializeField]float MovementSpeed = 0.5f;
     [SerializeField]SpriteRenderer spriteCharaterRenderer;
+    [SerializeField]private AudioClip walkSound;
     private void Start()
     {
         playerTransform = transform;
@@ -17,6 +18,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(currentPoint.IsAccessible() == false){
+            GameManager.instance.GameOver();
+        }
+
+
+
         if (!isMoving)
         {
             HandleInput();
@@ -76,7 +83,8 @@ public class PlayerMovement : MonoBehaviour
      private IEnumerator MoveToPoint(MovingPoint targetPoint)
     {
         isMoving = true;
-    
+
+        AudioManager.instance.PlaySound(walkSound);
         Vector3 startPosition = playerTransform.position;
         Vector3 endPosition = targetPoint.GetTransform().position;
         float distance = Vector3.Distance(startPosition, endPosition);

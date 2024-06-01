@@ -10,6 +10,6 @@ public class UIBullets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = MagazineSize.instance.getCurrentBullets() + "/60";
+        text.text = MagazineSize.instance.getCurrentBullets() + "/120";
     }
 }
