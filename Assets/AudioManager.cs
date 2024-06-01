@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        PlayMusic(Music);
+       //PlayMusic(Music);
     }
 
     public void SetMaxVolume(float volume){
@@ -39,6 +39,10 @@ public class AudioManager : MonoBehaviour
     }
 
     public void PlaySound(AudioClip clip){
+
+        if(clip == null){
+            return;
+        }
         SFXSource.PlayOneShot(clip);
     }
 
