@@ -21,6 +21,7 @@ public struct ConnectedPoint
 public class MovingPoint : MonoBehaviour
 {
     [SerializeField] private  GameObject AmmoBoxPrefab;
+    [SerializeField] private  GameObject GrenadePrefab;
     [SerializeField] private Sprite EnabledSprite;
     [SerializeField] private Sprite DisabledSprite;
 
@@ -91,6 +92,11 @@ public class MovingPoint : MonoBehaviour
     IEnumerator SpawnAmmoBox()
     {
         yield return new WaitForSeconds(GetAmmoBoxSpawn());
+            int i = Random.Range(1,0);
+
+        if(i == 1)
+            Instantiate(GrenadePrefab, transform.position, Quaternion.identity);
+        else
             Instantiate(AmmoBoxPrefab, transform.position, Quaternion.identity);
         SpawnAmmoBox();
     }
