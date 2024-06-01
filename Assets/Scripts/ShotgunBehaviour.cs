@@ -7,16 +7,16 @@ public class ShotgunBehaviour : PistolBehaviour
    [SerializeField]private int amountOfShots; 
    protected override void Shoot()
    {
-
+        
         if(!MagazineSize.instance.canShoot(amountOfShots))
         {
             return;
         }
-
-    MagazineSize.instance.RemoveBullets(amountOfShots);
+            AudioManager.instance.PlaySound(shootSound);
+         MagazineSize.instance.RemoveBullets(amountOfShots);
        for (int i = 0; i < amountOfShots; i++)
        {
-        AudioManager.instance.PlaySound(shootSound);
+        
             // Instantiate the bullet at the spawn point
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();

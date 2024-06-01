@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
            damageable.TakeDamage(damage);
                 if(impactEffect != null){
                 GameObject o =  Instantiate(impactEffect, transform.position, Quaternion.identity);
-                o.transform.localScale *= damage;
+                o.transform.localScale *= Mathf.Clamp(damage,1,5);
                 Destroy(o, 0.25f);
             }
            

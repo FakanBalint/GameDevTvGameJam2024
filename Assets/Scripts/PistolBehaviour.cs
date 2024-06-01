@@ -9,7 +9,7 @@ public class PistolBehaviour : MonoBehaviour
     public AudioClip shootSound; 
     [SerializeField]protected float bulletSpeed = 20f; 
     [SerializeField] protected float spreadIntensity = 5f;
-
+    [SerializeField]private AudioClip selectSound;
     [SerializeField] protected int requiredBullets = 1; 
     protected virtual void Update()
     {
@@ -20,6 +20,10 @@ public class PistolBehaviour : MonoBehaviour
             
             Shoot();
         }
+    }
+
+    private void OnEnable() {
+        AudioManager.instance.PlaySound(selectSound);
     }
 
     protected void AimAtCursor()

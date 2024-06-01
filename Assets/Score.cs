@@ -29,4 +29,9 @@ public class Score : MonoBehaviour
     {
         score ++;
     }
+
+    public int GetScore()
+    {
+        return score;
+    }
 }
